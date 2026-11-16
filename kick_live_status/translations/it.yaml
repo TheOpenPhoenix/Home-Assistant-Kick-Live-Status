@@ -1,0 +1,30 @@
+configuration:
+  client_id:
+    name: ID client
+    description: >-
+      L'ID client della tua app sviluppatore Kick.com. Puoi crearne una su
+      kick.com/settings/developer.
+  client_secret:
+    name: Segreto client
+    description: >-
+      Il segreto client della tua app sviluppatore Kick.com. Tienilo riservato.
+  channels:
+    name: Canali
+    description: >-
+      Slug dei canali Kick da monitorare (l'ultima parte dell'URL del canale,
+      kick.com/<slug>). Per ogni canale viene creata un'entità
+      binary_sensor.kick_<slug>.
+  scan_interval:
+    name: Intervallo di scansione
+    description: >-
+      Ogni quanto interrogare l'API di Kick, in secondi (30-300). Il valore
+      predefinito è 60.
+  max_backoff:
+    name: Attesa massima tra i tentativi
+    description: >-
+      Attesa massima tra i tentativi, in secondi (60-86400), quando le richieste
+      all'API di Kick falliscono. L'attesa raddoppia dopo ogni interrogazione
+      non riuscita fino a questo limite e viene reimpostata dopo un'interrogazione
+      riuscita. Il valore predefinito è 43200 (12 ore).
+network:
+  8080/tcp: Porta interna per il controllo di integrità usato dal watchdog del Supervisor. Non è esposta all'esterno dell'add-on.
