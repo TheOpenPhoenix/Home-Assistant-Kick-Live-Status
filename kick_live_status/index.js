@@ -214,7 +214,6 @@ function shutdown(signal, watchdogServer) {
   shuttingDown = true;
   if (pollTimer) clearTimeout(pollTimer);
   watchdogServer.close(() => process.exit(0));
-  // Don't hang if a connection lingers.
   setTimeout(() => process.exit(0), 2000).unref();
 }
 
@@ -228,9 +227,6 @@ async function main() {
   console.log("═".repeat(50));
   console.log("");
 
-  // Supervisor's tcp:// watchdog only checks that connect() succeeds, then
-  // closes the socket without reading. Writing a payload races with that close
-  // and can raise ECONNRESET/EPIPE, so just accept and end the connection.
   const watchdogServer = createServer((socket) => {
     socket.on("error", () => {});
     socket.end();
