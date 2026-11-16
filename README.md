@@ -6,6 +6,8 @@
 [![Home Assistant Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-41BDF5?logo=homeassistant&logoColor=white)](https://www.home-assistant.io/addons/)
 [![License: MIT](https://img.shields.io/github/license/TheOpenPhoenix/Home-Assistant-Kick-Live-Status)](https://github.com/TheOpenPhoenix/Home-Assistant-Kick-Live-Status/blob/main/kick_live_status/LICENSE)
 
+> **Disclaimer:** This is a third-party community add-on and is not affiliated with, endorsed by, or associated with Kick.com. Kick is a trademark of its respective owner.
+
 Monitor Kick.com streamers and expose their live status as sensors in Home Assistant.
 
 ## Installation
@@ -67,3 +69,6 @@ automation:
             {{ state_attr(trigger.entity_id, 'stream_title') }}
 ```
 
+## Credits
+
+Icon based on the [Material Design Icons](https://pictogrammers.com/library/mdi/icon/broadcast/) "broadcast" icon by Pictogrammers, used under the Apache License 2.0. See [NOTICE](kick_live_status/NOTICE.md) for details.
