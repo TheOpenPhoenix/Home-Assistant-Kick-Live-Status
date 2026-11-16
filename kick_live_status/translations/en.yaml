@@ -1,0 +1,28 @@
+configuration:
+  client_id:
+    name: Client ID
+    description: >-
+      The Client ID of your Kick.com developer app. Create one at
+      kick.com/settings/developer.
+  client_secret:
+    name: Client secret
+    description: >-
+      The Client Secret of your Kick.com developer app. Keep this private.
+  channels:
+    name: Channels
+    description: >-
+      Kick channel slugs to monitor (the name in the channel URL, e.g. "xqc"
+      for kick.com/xqc). One binary_sensor.kick_<slug> entity is created per
+      channel.
+  scan_interval:
+    name: Scan interval
+    description: >-
+      How often to poll the Kick API, in seconds (30-300). Default is 60.
+  max_backoff:
+    name: Maximum backoff
+    description: >-
+      Longest wait between retries, in seconds (60-86400), when the Kick API or
+      Home Assistant is failing. The wait doubles after each failed poll up to
+      this limit and resets after a successful poll. Default is 43200 (12 hours).
+network:
+  8080/tcp: Internal health check port used by the Supervisor watchdog. It is not exposed outside the add-on.
