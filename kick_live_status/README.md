@@ -5,11 +5,16 @@
 ![Supports amd64 Architecture](https://img.shields.io/badge/amd64-yes-green.svg)
 [![Home Assistant Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-41BDF5?logo=homeassistant&logoColor=white)](https://www.home-assistant.io/addons/)
 [![License: MIT](https://img.shields.io/github/license/TheOpenPhoenix/Home-Assistant-Kick-Live-Status)](https://github.com/TheOpenPhoenix/Home-Assistant-Kick-Live-Status/blob/main/kick_live_status/LICENSE)
-[![Open your Home Assistant instance and show the add add-on repository dialog with this repository pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FTheOpenPhoenix/Home-Assistant-Kick-Live-Status)
 
 > **Disclaimer:** This is a third-party community add-on and is not affiliated with, endorsed by, or associated with Kick.com.
 
 Monitor Kick.com streamers and expose their live status as sensors in Home Assistant.
+
+## Installation
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with this repository pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FTheOpenPhoenix/Home-Assistant-Kick-Live-Status)
+
+Or add the repository manually: in Home Assistant go to **Settings → Add-ons → Add-on Store → ⋮ → Repositories**, add `https://github.com/TheOpenPhoenix/Home-Assistant-Kick-Live-Status`, then install **Kick Live Status**.
 
 ## How it works
 
