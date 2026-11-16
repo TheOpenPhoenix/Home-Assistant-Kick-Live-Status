@@ -1,14 +1,5 @@
 name: Build and release add-on
 
-# Releases are driven by the add-on `version` in kick_live_status/config.yaml.
-# When a version that has no GitHub Release yet lands on main, this workflow:
-#   1. builds the add-on image for each supported architecture and pushes it to
-#      GHCR (Supervisor pulls `image:` from config.yaml, tagged with `version`),
-#   2. creates the git tag v<version> and a GitHub Release whose notes are that
-#      version's entry in kick_live_status/CHANGELOG.md.
-# Versions that already have a release are skipped, so docs-only changes never
-# rebuild or overwrite a published image. Older versions are not backfilled.
-# Pull requests only build (no push) to validate the Dockerfile.
 on:
   push:
     branches: [main]
@@ -31,7 +22,6 @@ permissions:
 
 concurrency:
   group: build-${{ github.ref }}
-  # Never cancel a publish half way through; only supersede PR validation runs.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
