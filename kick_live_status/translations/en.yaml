@@ -11,8 +11,8 @@ configuration:
   channels:
     name: Channels
     description: >-
-      Kick channel slugs to monitor (the name in the channel URL, e.g. "xqc"
-      for kick.com/xqc). One binary_sensor.kick_<slug> entity is created per
+      Kick channel slugs to monitor (the last part of the channel URL,
+      kick.com/<slug>). One binary_sensor.kick_<slug> entity is created per
       channel.
   scan_interval:
     name: Scan interval
@@ -21,8 +21,8 @@ configuration:
   max_backoff:
     name: Maximum backoff
     description: >-
-      Longest wait between retries, in seconds (60-86400), when the Kick API or
-      Home Assistant is failing. The wait doubles after each failed poll up to
+      Longest wait between retries, in seconds (60-86400), when requests to the
+      Kick API are failing. The wait doubles after each failed poll up to
       this limit and resets after a successful poll. Default is 43200 (12 hours).
 network:
   8080/tcp: Internal health check port used by the Supervisor watchdog. It is not exposed outside the add-on.
