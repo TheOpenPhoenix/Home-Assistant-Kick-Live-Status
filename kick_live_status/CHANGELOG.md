@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.2.14
+
+### Fixed
+
+- Fixed random crash/restart loops caused by the TCP watchdog server: it no longer writes a payload to Supervisor's probe connection and now handles socket and server `error` events instead of exiting on an unhandled `ECONNRESET`/`EPIPE`
+- Shutdown now clears the pending poll timer and exits cleanly on SIGTERM/SIGINT (handlers are registered before the first poll)
+- Fixed `scan_interval` documentation to match the configured range (30–300, default 60)
+- Synced `io.hass.version` label in Dockerfile with the add-on version
+
+### Removed
+
+- Dropped 32-bit architectures (`armhf`, `armv7`, `i386`); only `aarch64` and `amd64` are supported, clearing the Supervisor deprecation warning
+
 ## 1.2.13
 
 ### Added
