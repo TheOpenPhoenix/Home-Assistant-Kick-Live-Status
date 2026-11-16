@@ -1,0 +1,29 @@
+configuration:
+  client_id:
+    name: Client-ID
+    description: >-
+      De Client-ID van je Kick.com-ontwikkelaarsapp. Maak er een aan op
+      kick.com/settings/developer.
+  client_secret:
+    name: Client-secret
+    description: >-
+      Het Client-secret van je Kick.com-ontwikkelaarsapp. Houd dit geheim.
+  channels:
+    name: Kanalen
+    description: >-
+      Kick-kanaalslugs die bewaakt moeten worden (het laatste deel van de
+      kanaal-URL, kick.com/<slug>). Voor elk kanaal wordt een entiteit
+      binary_sensor.kick_<slug> aangemaakt.
+  scan_interval:
+    name: Controle-interval
+    description: >-
+      Hoe vaak de Kick-API wordt opgevraagd, in seconden (30-300). Standaard is 60.
+  max_backoff:
+    name: Maximale wachttijd bij fouten
+    description: >-
+      Langste wachttijd tussen nieuwe pogingen in seconden (60-86400) wanneer
+      verzoeken aan de Kick-API mislukken. De wachttijd verdubbelt na elke
+      mislukte poging tot deze limiet en wordt na een geslaagde poging
+      teruggezet. Standaard is 43200 (12 uur).
+network:
+  8080/tcp: Interne poort voor de gezondheidscontrole van de Supervisor-watchdog. Deze is niet buiten de add-on bereikbaar.
