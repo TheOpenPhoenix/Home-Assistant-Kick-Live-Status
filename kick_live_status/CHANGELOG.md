@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.15
+
+### Added
+
+- Prebuilt `aarch64` and `amd64` images are now published to GHCR by GitHub Actions and installed via the `image:` key in `config.yaml`, so installs and updates no longer build locally on the Home Assistant host
+
 ## 1.2.14
 
 ### Fixed

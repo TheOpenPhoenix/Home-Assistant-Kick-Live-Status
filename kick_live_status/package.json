@@ -1,8 +1,0 @@
-{
-  "name": "kick-live-status",
-  "version": "1.2.14",
-  "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  }
-}
