@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.16
+
+### Changed
+
+- Replaced the add-on logo, which was Kick's own logo, with a neutral logo and icon based on the Material Design Icons "broadcast" icon (Apache-2.0). No Kick logos or brand assets are included in the add-on anymore
+- Added `icon.png`, a `NOTICE.md` with the icon attribution and licence texts, and a trademark and non-affiliation disclaimer to the READMEs
+
 ## 1.2.15
 
 ### Added
